@@ -1,5 +1,6 @@
 package cn.com.chng.erp.controllers;
 
+import cn.com.chng.erp.basic.BasicController;
 import cn.com.chng.erp.utils.ApplicationHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
