@@ -37,4 +37,5 @@ public class Constants {
     public static final String NETWORK_ERROR_MESSAGE = "网络错误！";
 
     public static final String DEFAULT_DATE_PATTERN = "yyyy-MM-dd HH:mm:ss";
+    public static final String KEY_PLATFORM_PRIVATE_KEY = "_platform_private_key";
 }

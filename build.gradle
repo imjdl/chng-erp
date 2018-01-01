@@ -41,4 +41,6 @@ dependencies {
     compile("net.sf.json-lib:json-lib:2.4:jdk15")
     compile("org.springframework.boot:spring-boot-starter-data-redis")
     compile("org.springframework.session:spring-session-data-redis")
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile("org.springframework.security:spring-security-taglibs:4.2.2.RELEASE")
 }
