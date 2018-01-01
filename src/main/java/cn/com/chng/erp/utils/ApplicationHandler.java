@@ -1,6 +1,7 @@
 package cn.com.chng.erp.utils;
 
 import cn.com.chng.erp.constants.Constants;
+import cn.com.chng.erp.constants.SessionConstants;
 import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.Validate;
@@ -417,5 +418,9 @@ public class ApplicationHandler {
         for (String[] valueAndName : valueAndNames) {
             notEmpty(valueAndName[0], valueAndName[1]);
         }
+    }
+
+    public static Integer getUserType() {
+        return (Integer) getHttpSession().getAttribute(SessionConstants.KEY_USER_TYPE);
     }
 }
