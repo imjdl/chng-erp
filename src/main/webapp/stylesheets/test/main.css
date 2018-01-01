@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/*单页布局样式*/
+.head3{font-weight:normal;font-size:14px;padding:0 4px;}
+.function-btn{height:40px;width:100%;background:#fff;margin:4px 0 8px;line-height:40px;border-radius:5px;}
+.boxtab-btn{top:0;}
+.boxtab-btn li{float:left;font-size:13px;height:40px;cursor:pointer;padding-left:34px;color:#0ae;}
+.boxtab-btn li.add{background-position:-464px -111px;color:#ffa200;}
+.boxtab-btn li.alt{background-position:-464px -140px;}
+.boxtab-btn li.del{background-position:-464px -168px;color:#ff6565;}
+.boxtab-btn li.other{background-position:-409px -229px;padding:0 34px 0 16px;z-index: 9999}
+.boxtab-btn li.bat{background-position:-464px -197px;}
+.boxtab-btn li.back{background-position:-464px -292px;}
+.boxtab-btn-list{width:100px;right:0;background:#fff;border-radius:0 0 5px 5px;}
+.boxtab-btn-list span{display:inline-block;width:100px;height:24px;line-height:24px;text-align:center;}
+
+.search{width:300px;height:30px;border:1px solid #0ae;border-radius:4px;right:10px;top:4px;background:#0ae;}
+.search-txt{height:30px;width:250px;background:#fff;right:50px;border-radius:4px 0 0 4px;padding-left:6px;}
+.search-btn{height:30px;right:0;width:50px;background-position:8px -24px;cursor:pointer;}
+
+/*清除查询叉号样式*/
+.srh-close{display:inline-block;height:16px;width:16px;background-position:0px -112px;right:50px;top:7px;cursor:pointer;z-index: 9999}

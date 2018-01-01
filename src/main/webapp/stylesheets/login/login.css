@@ -1,0 +1,35 @@
+@charset "utf-8";
+/*注册登录样式开始*/
+.login{background:#f4f8fa;width:100%;height:100%;min-height:940px;}
+.login-wrap{width:960px;margin:0 auto;}
+.login-w-imgbox,.login-wrap .login-w-logo1{width:960px;}
+.login-wrap .login-w-logo1{padding:20px 0;text-align: center}
+.login-wrap .login-w-logo1 img{display:inline-block;margin:0 auto}
+.login-title-txt{width:600px;height:2px;background:#d3d8db;margin:0 auto 20px;}
+.login-title-txt span{display:inline-block;width:140px;height:20px;background:#f4f8fa;top:-9px;left:224px;font-size:14px;color:#a6aaad;text-align:center;}
+.login-btn{width:600px;margin:0 auto;}
+.login-btn p{width:360px;height:42px;margin-bottom:10px;}
+.login-btn input{display:inline-block;width:283px;height:40px;padding:0px 10px;background:#fff;color:black;font-size:14px;border:1px solid #d3d8db;border-radius:4px;}
+.login-btn input:-moz-placeholder{color: #9b9fa1}
+.login-btn input:-ms-input-placeholder{color: #9b9fa1}
+.login-btn input::-webkit-input-placeholder{color: #9b9fa1}
+.login-btn input::-moz-placeholder{color: #9b9fa1}
+.login-btn .login-l span{width:70px;text-align:right;}
+.login-btn .login-l span.fl{width:210px;}
+.login-btn .login-l span.fr{width:126px;}
+.login-btn p i{color:#ff6161;right:0;top:10px;font-size:24px;display:inline-block;height:20px;width:20px;}
+.login-button-l input{display:inline-block;background:#00aaee;width:283px;color:#fff;border:none;padding:0 10px;cursor:pointer;}
+.login-wrap .login-l{width:360px;margin-left: 90px}
+.login-wrap .login-r{width:170px;border-left:1px solid #d3d8db;padding-left:34px;height:200px;color:#9b9fa1;}
+.login-wrap .login-code-txt{width:200px;font-size:12px;padding:10px 0;}
+.copyright-txt{bottom:0;color:#444647;text-align:center;width:100%;font-size:12px;padding-bottom:10px;}
+.login-title-txt-c,.login-btn-c{width:360px;margin: 20px auto;}
+.login-title-txt-c span{left:112px}
+.login-btn p.tel-key input{width:146px;width:126px \9;float:left;}
+.login-btn p.tel-key i{right:136px;right:136px \9;}
+.login-btn p.tel-key input.tel-key-btn{margin-left:6px;width:130px;height:42px;border:none;background:#ffa200;color:#fff;}
+.login-l p.tel-nmb{height:60px;}
+.login-l p.tel-nmb em{left:76px;bottom:-6px;color:#aaa;}
+.login-btn-c select{display:inline-block;width:283px;width:285px \9;height:40px;padding:0 10px;padding:0 0 0 10px \9;background:#fff;color:#9b9fa1;font-size:14px;border:1px solid #d3d8db;border-radius:4px;}
+/*注册登录样式结束*/
+.inline-block{display: inline-block}

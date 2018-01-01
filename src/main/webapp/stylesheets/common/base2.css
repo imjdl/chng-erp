@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.common-box{margin-bottom: 20px;}
+.common-box div.item-header{height: 46px;background-color: #f3f7f9;line-height: 46px;font-size: 16px;font-weight: normal;padding-left: 10px;}
+.common-box div.item{height:60px;line-height:60px;padding-left: 10px;}
+.common-box div.easyui-datebox-item{height:60px;line-height:60px;padding-left: 10px;}
+.common-box input{border:1px solid #dbdee0;border-radius:4px;padding:0 10px;width:300px;height:30px;}
+.common-box div.item span{font-weight:normal;font-size:14px;width: 120px;display: inline-block;text-align: right;}
+.common-box div.easyui-datebox-item span.item-text{font-weight:normal;font-size:14px;width: 120px;display: inline-block;text-align: right;}
+.common-box div span.switch{background:url(../img/switch.png) no-repeat;height:30px;margin:18px 0;width:50px;}
+.common-box div span.switch-off{background-position:0 -32px;}
+.common-box select{border:1px solid #dbdee0;border-radius:4px;padding:0 10px;height:30px;width:300px;}
+.common-box td{height: 30px;padding: 0 10px;}
+.common-box tr{height: 40px;}
+.common-box table{margin-top: 10px;}
+.common-box textarea.logback{border:1px solid #dbdee0;border-radius:4px;padding:0 10px;width: 95%;height: 350px;margin-top: 20px;font-family: Consolas;font-size: 24px;}
+
+.common-box div.image-item{padding-left: 10px;margin-top: 20px;}
+.common-box div.image-item span{font-weight:normal;font-size:14px;width: 120px;display: inline-block;text-align: right;}
+.common-box div.image-item img.login-logo{width: 300px;height: 157px;border: 1px solid #dbdee0;cursor: pointer;}
+.common-box div.image-item img.main-logo{width: 160px;height: 70px;border: 1px solid #dbdee0;cursor: pointer;}
+.common-box div.image-item img.favicon{width: 16px;height: 16px;border: 1px solid #dbdee0;cursor: pointer;}
+
+.common-box .textarea-item{height: 150px;line-height: 150px;padding-left: 10px;}
+.common-box div.textarea-item span{font-weight:normal;font-size:14px;width: 120px;display: inline-block;text-align: right;}
+.common-box textarea.address{border: 1px solid #DBDEE0; border-radius: 4px; padding: 10px;height: 150px;width: 300px;vertical-align: middle}
+
+.readonly{background-color:rgb(223, 227, 229);color:black;}
