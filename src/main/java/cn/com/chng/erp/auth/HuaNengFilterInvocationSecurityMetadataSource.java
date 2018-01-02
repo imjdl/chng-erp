@@ -1,8 +1,14 @@
 package cn.com.chng.erp.auth;
 
+import cn.com.chng.erp.constants.Constants;
+import cn.com.chng.erp.domains.SystemPrivilege;
+import cn.com.chng.erp.services.SystemPrivilegeService;
 import cn.com.chng.erp.utils.AuthorizationUtils;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.security.access.ConfigAttribute;
+import org.springframework.security.access.SecurityConfig;
 import org.springframework.security.web.FilterInvocation;
 import org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource;
 import org.springframework.security.web.util.matcher.RequestMatcher;
@@ -17,6 +23,8 @@ import java.util.*;
  */
 @Component
 public class HuaNengFilterInvocationSecurityMetadataSource implements FilterInvocationSecurityMetadataSource {
+    @Autowired
+    private SystemPrivilegeService systemPrivilegeService;
     private Map<RequestMatcher, Collection<ConfigAttribute>> requestMap;
 
     public Map<RequestMatcher, Collection<ConfigAttribute>> getRequestMap() {
@@ -29,6 +37,25 @@ public class HuaNengFilterInvocationSecurityMetadataSource implements FilterInvo
 
     public void init() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
         LinkedHashMap<RequestMatcher, Collection<ConfigAttribute>> requestMap = new LinkedHashMap<RequestMatcher, Collection<ConfigAttribute>>();
+        List<SystemPrivilege> systemPrivileges = systemPrivilegeService.findAll(Constants.SERVICE_NAME_ERP);
+        for (SystemPrivilege systemPrivilege : systemPrivileges) {
+            String controllerName = systemPrivilege.getControllerName();
+            String actionName = systemPrivilege.getActionName();
+            if (StringUtils.isBlank(controllerName) || StringUtils.isBlank(actionName)) {
+                continue;
+            }
+            RequestMatcher requestMatcher = new AntPathRequestMatcher("/" + controllerName + "/" + actionName);
+            List<ConfigAttribute> configAttributes = new ArrayList<ConfigAttribute>();
+            int privilegeType = systemPrivilege.getPrivilegeType();
+            if (privilegeType == Constants.SYSTEM_PRIVILEGE_TYPE_PERMIT_ALL) {
+                configAttributes.add(new SecurityConfig(Constants.PERMIT_ALL));
+            } else if (privilegeType == Constants.SYSTEM_PRIVILEGE_TYPE_HAS_AUTHORITY) {
+                configAttributes.add(new SecurityConfig(String.format(Constants.HAS_AUTHORITY_FORMAT, systemPrivilege.getPrivilegeCode())));
+            } else if (privilegeType == Constants.SYSTEM_PRIVILEGE_TYPE_AUTHENTICATED) {
+                configAttributes.add(new SecurityConfig(Constants.AUTHENTICATED));
+            }
+            requestMap.put(requestMatcher, configAttributes);
+        }
         this.requestMap = AuthorizationUtils.processMap(requestMap, new SpelExpressionParser());
     }
 

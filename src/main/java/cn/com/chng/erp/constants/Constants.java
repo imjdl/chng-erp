@@ -38,4 +38,14 @@ public class Constants {
 
     public static final String DEFAULT_DATE_PATTERN = "yyyy-MM-dd HH:mm:ss";
     public static final String KEY_PLATFORM_PRIVATE_KEY = "_platform_private_key";
+
+    public static final String SERVICE_NAME_ERP = "erp";
+
+    public static final Integer SYSTEM_PRIVILEGE_TYPE_PERMIT_ALL = 1;
+    public static final Integer SYSTEM_PRIVILEGE_TYPE_HAS_AUTHORITY = 2;
+    public static final Integer SYSTEM_PRIVILEGE_TYPE_AUTHENTICATED = 3;
+    public static final String AUTHENTICATED = "authenticated";
+    public static final String PERMIT_ALL = "permitAll";
+    public static final String HAS_AUTHORITY_FORMAT = "hasAuthority('role_%s')";
+    public static final String SIMPLE_GRANTED_AUTHORITY_ROLE_FORMAT = "role_%s";
 }
