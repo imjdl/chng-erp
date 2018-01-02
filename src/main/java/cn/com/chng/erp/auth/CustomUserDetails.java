@@ -2,6 +2,7 @@ package cn.com.chng.erp.auth;
 
 import org.springframework.security.core.GrantedAuthority;
 
+import java.math.BigInteger;
 import java.util.Collection;
 import java.util.Set;
 
@@ -16,9 +17,9 @@ public class CustomUserDetails implements org.springframework.security.core.user
     private final boolean accountNonLocked;
     private final boolean credentialsNonExpired;
     private final boolean enabled;
-    private final Integer userId;
+    private final BigInteger userId;
 
-    public CustomUserDetails(Integer userId, String username, String password, Set<GrantedAuthority> authorities, boolean accountNonExpired, boolean accountNonLocked, boolean credentialsNonExpired, boolean enabled) {
+    public CustomUserDetails(BigInteger userId, String username, String password, Set<GrantedAuthority> authorities, boolean accountNonExpired, boolean accountNonLocked, boolean credentialsNonExpired, boolean enabled) {
         this.userId = userId;
         this.username = username;
         this.password = password;
@@ -29,7 +30,7 @@ public class CustomUserDetails implements org.springframework.security.core.user
         this.enabled = enabled;
     }
 
-    public Integer getUserId() {
+    public BigInteger getUserId() {
         return userId;
     }
 

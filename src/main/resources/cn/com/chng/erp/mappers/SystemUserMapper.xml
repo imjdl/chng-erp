@@ -48,23 +48,42 @@
     </select>
 
     <sql id="searchConditionSql">
-        WHERE
-        <foreach collection="searchConditions" index="index" item="searchCondition" separator=" AND ">
-            <choose>
-                <when test="@org.apache.commons.lang.StringUtils@equalsIgnoreCase(searchCondition.operationSymbol, 'IN')">
-                    ${searchCondition.columnName} ${searchCondition.operationSymbol}
-                    <foreach collection="searchCondition.searchParameter" index="index" item="item" open="(" separator="," close=")">
-                        #{item}
-                    </foreach>
-                </when>
-                <otherwise>
-                    ${searchCondition.columnName} ${searchCondition.operationSymbol} #{searchCondition.searchParameter}
-                </otherwise>
-            </choose>
-        </foreach>
+        <if test="@org.apache.commons.collections.CollectionUtils@isNotEmpty(searchConditions)">
+            WHERE
+            <foreach collection="searchConditions" index="index" item="searchCondition" separator=" AND ">
+                <choose>
+                    <when test="@org.apache.commons.lang.StringUtils@equalsIgnoreCase(searchCondition.operationSymbol, 'IN')">
+                        ${searchCondition.columnName} ${searchCondition.operationSymbol}
+                        <foreach collection="searchCondition.searchParameter" index="index" item="item" open="(" separator="," close=")">
+                            #{item}
+                        </foreach>
+                    </when>
+                    <otherwise>
+                        ${searchCondition.columnName} ${searchCondition.operationSymbol} #{searchCondition.searchParameter}
+                    </otherwise>
+                </choose>
+            </foreach>
+        </if>
     </sql>
 
     <sql id="paginationSql">
         LIMIT #{offset}, #{maxResults}
     </sql>
+    
+    <select id="findAllPrivileges" resultType="cn.com.chng.erp.domains.SystemPrivilege">
+        SELECT
+        *
+        FROM system_privilege
+        WHERE id IN (SELECT privilege_id FROM system_role_privilege_r WHERE role_id IN (SELECT role_id FROM system_user_role_r WHERE user_id = #{userId}))
+        AND service_name = #{serviceName}
+        AND deleted = 0
+    </select>
+
+    <update id="updateLoginLog">
+        UPDATE system_user SET last_login_ip_address = #{remoteAddress}, login_count = #{loginCount} WHERE id = #{userId}
+    </update>
+
+    <select id="findByCodeOrEmailOrMobile" resultType="cn.com.chng.erp.domains.SystemUser">
+        SELECT * FROM system_user WHERE (code = #{loginName} OR email = #{loginName} OR mobile = #{loginName}) AND deleted = 0
+    </select>
 </mapper>
