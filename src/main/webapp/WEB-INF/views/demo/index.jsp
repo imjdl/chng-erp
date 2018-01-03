@@ -18,27 +18,10 @@
             var map = new BMap.Map("container");
             var point = new BMap.Point(120.38442818, 36.10521490);
             map.centerAndZoom(point, 100);
-            map.enableScrollWheelZoom(true);
         });
     </script>
 </head>
-<body>
-<div id="container" style="width: 600px;height: 300px;"></div>
-<br><br><br>
-<select name="province" style="width: 100px;height: 30px;border: 1px solid #00AAEE;">
-    <option value="150000">内蒙古</option>
-    <option value="150000">内蒙古</option>
-    <option value="150000">内蒙古</option>
-</select>
-<select name="province" style="width: 100px;height: 30px;border: 1px solid #00AAEE;">
-    <option value="150000">内蒙古</option>
-    <option value="150000">内蒙古</option>
-    <option value="150000">内蒙古</option>
-</select>
-<select name="province" style="width: 100px;height: 30px;border: 1px solid #00AAEE;">
-    <option value="150000">内蒙古</option>
-    <option value="150000">内蒙古</option>
-    <option value="150000">内蒙古</option>
-</select>
+<body style="padding: 0px;margin: 0px">
+<div id="container" style="width: 100%;height: 100%;"></div>
 </body>
 </html>
