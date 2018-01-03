@@ -23,5 +23,18 @@
 </head>
 <body style="padding: 0px;margin: 0px">
 <div id="container" style="width: 100%;height: 100%;"></div>
+
+<div style="width: 300px;height: 300px;background: rgba(0, 0, 0, 0.5);position: fixed;top: 30%;left: 40%;border-radius: 8px;text-align: center;">
+    <div>
+        <input type="text" style="height: 30px;width: 250px;margin-top: 20px;">
+    </div>
+    <div>
+        <input type="text" style="height: 30px;width: 250px;margin-top: 20px;">
+    </div>
+    <div>
+        <button style="height: 30px;width: 250px;cursor: pointer;border-radius: 4px;background-color: #00AAEE;color: #FFFFFF;border: none;font-size: 16px;margin-top: 20px;">登录</button>
+    </div>
+</div>
+
 </body>
 </html>
