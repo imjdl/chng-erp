@@ -22,4 +22,5 @@ public interface SystemUserMapper {
     List<SystemPrivilege> findAllPrivileges(@Param("serviceName") String serviceName, @Param("userId") BigInteger userId);
     long updateLoginLog(@Param("remoteAddress") String remoteAddress, @Param("loginCount") Integer loginCount, @Param("userId") BigInteger userId);
     SystemUser findByCodeOrEmailOrMobile(@Param("loginName") String loginName);
+    long count(SearchModel searchModel);
 }
