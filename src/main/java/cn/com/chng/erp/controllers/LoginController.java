@@ -17,7 +17,7 @@ public class LoginController extends BasicController {
         if (userType != null) {
             modelAndView.setViewName("redirect:../main/toMainPage");
         } else {
-            modelAndView.setViewName("index");
+            modelAndView.setViewName("login/index");
         }
         return modelAndView;
     }
