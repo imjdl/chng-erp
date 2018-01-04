@@ -24,6 +24,9 @@ public class Constants {
      * 配置相关常量
      */
     public static final String PRODUCTION_PROPERTIES = "production.properties";
+    public static final String DEPLOYMENT_ENVIRONMENT = "deployment.environment";
+    public static final String PARTITION_CODE = "partition.code";
+    public static final String SERVICE_NAME = "service.name";
 
     public static final String SQL_OPERATION_SYMBOL_IN = "IN";
     public static final String SQL_OPERATION_SYMBOL_LIKE = "LIKE";

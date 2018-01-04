@@ -13,4 +13,11 @@ public class DemoController {
         modelAndView.setViewName("demo/index");
         return modelAndView;
     }
+
+    @RequestMapping(value = "/test")
+    public ModelAndView test() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("demo/test");
+        return modelAndView;
+    }
 }
