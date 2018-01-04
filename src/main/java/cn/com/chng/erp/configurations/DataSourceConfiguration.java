@@ -1,4 +1,4 @@
-package cn.com.chng.erp;
+package cn.com.chng.erp.configurations;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.boot.context.properties.ConfigurationProperties;
