@@ -49,6 +49,5 @@ public class Constants {
     public static final Integer SYSTEM_PRIVILEGE_TYPE_AUTHENTICATED = 3;
     public static final String AUTHENTICATED = "authenticated";
     public static final String PERMIT_ALL = "permitAll";
-    public static final String HAS_AUTHORITY_FORMAT = "hasAuthority('role_%s')";
-    public static final String SIMPLE_GRANTED_AUTHORITY_ROLE_FORMAT = "role_%s";
+    public static final String HAS_AUTHORITY_FORMAT = "hasAuthority('%s')";
 }

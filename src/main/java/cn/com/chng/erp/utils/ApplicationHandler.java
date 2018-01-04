@@ -420,7 +420,19 @@ public class ApplicationHandler {
         }
     }
 
+    public static String getUserName() {
+        return (String) getHttpSession().getAttribute(SessionConstants.KEY_USER_NAME);
+    }
+
     public static Integer getUserType() {
         return (Integer) getHttpSession().getAttribute(SessionConstants.KEY_USER_TYPE);
+    }
+
+    public static String getPowerStationName() {
+        return (String) getHttpSession().getAttribute(SessionConstants.KEY_POWER_STATION_NAME);
+    }
+
+    public static BigInteger getUserId() {
+        return (BigInteger) getHttpSession().getAttribute(SessionConstants.KEY_USER_ID);
     }
 }

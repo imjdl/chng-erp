@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: liuyandong
+  Date: 2018/1/4
+  Time: 下午8:25
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="custom" uri="http://www.chng.com.cn" %>
 <html>
